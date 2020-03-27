@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chinalwb.slidetoconfirmlib.SlideToConfirm xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slide_to_confirm"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="20dp"
+
+    app:border_radius="30dp"
+    app:border_width="1dp"
+    app:slider_color="@color/pact_purple"
+    app:slider_lottie="lottie_x.json"
+    app:slider_image="@android:drawable/ic_lock_lock"
+    app:slider_reset_duration="1000"
+    app:slider_vibration_duration="50"
+    app:slider_width="60dp"
+    app:slider_threshold="1dp"
+    app:engage_text="Slide to unlock"
+    app:engage_text_size="17sp"
+    app:engage_text_color="@color/colorAccent"
+    app:completed_text="Unlocked!"
+    app:completed_text_color="@android:color/white"
+    app:completed_text_size="30sp"
+
+    tools:context=".MainActivity" >
+</com.chinalwb.slidetoconfirmlib.SlideToConfirm>
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="52dp"-->
+<!--    android:layout_gravity="center_vertical"-->
+<!--    android:layout_margin="20dp"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <TextView-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/colorAccent"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:text="Slide to confirm"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:gravity="center"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/pact_purple"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/stc_slider"-->
+<!--        android:layout_width="90dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/slider"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingBottom="10dp"-->
+<!--        android:paddingStart="20dp"-->
+<!--        android:paddingEnd="20dp"-->
+<!--        android:translationX="50dp"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        />-->
+
+<!--</RelativeLayout>-->

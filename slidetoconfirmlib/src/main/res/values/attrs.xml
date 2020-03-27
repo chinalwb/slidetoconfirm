@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SlideToConfirm">
+        <attr name="border_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="slider_color" format="color|reference" />
+        <attr name="slider_lottie" format="string" />
+        <attr name="slider_image" format="reference" />
+        <attr name="slider_width" format="dimension" />
+        <attr name="slider_reset_duration" format="integer" />
+        <attr name="slider_vibration_duration" format="integer" />
+        <attr name="slider_threshold" format="dimension" />
+
+
+        <!-- Not support yet -->
+        <!-- <attr name="engage_background" format="color|reference" /> -->
+
+        <attr name="engage_text" format="string" />
+        <attr name="engage_text_size" format="dimension" />
+        <attr name="engage_text_color" format="color|reference" />
+        <attr name="engaged_text_font" format="reference" />
+
+        <attr name="completed_text" format="string" />
+        <attr name="completed_text_size" format="dimension" />
+        <attr name="completed_text_color" format="color|reference" />
+        <attr name="completed_text_font" format="reference" />
+
+    </declare-styleable>
+</resources>
