@@ -1,2 +1,2 @@
-# slidetoconfirm
-Slide to confirm component on Android
+![](./slide_to_confirm.gif)
+# Slide to conifrm
