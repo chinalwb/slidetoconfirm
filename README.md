@@ -22,7 +22,7 @@
 - Easy to use
 - Perfect performance
 - Deal with conflicts between vertical scroll guestures on out container perfect
-- Flexible for customizing the slider / border radius / background colors / animation duration / easy to vibrate / ...
+- Flexible for customizing the slider / border radius / background colors / animate duration / vibrate duration / ...
 
 ### How to use?
 - Two steps:
