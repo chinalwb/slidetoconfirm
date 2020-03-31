@@ -5,7 +5,7 @@
 
 # Slide to confirm
 ### What's this?
-- It is a component that requires user slide to confirm for some proceedingt actions
+- It is a component that requires user slide to confirm for some proceeding actions
 - Works on Android
 
 ### How is it implemented?
