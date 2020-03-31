@@ -19,7 +19,7 @@
 - It resets its status when user releases but the slider is not at the end
 
 ### Highlights
-- Easy to use
+- Easy to use, one line code for all configurations
 - Perfect performance
 - Deal with conflicts between vertical scroll guestures on out container perfect
 - Flexible for customizing the slider / border radius / background colors / animate duration / vibrate duration / ...
