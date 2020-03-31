@@ -21,7 +21,7 @@
 ### Highlights
 - Easy to use, one line code for all configurations
 - Perfect performance
-- Deal with conflicts between vertical scroll guestures on out container perfect
+- Deal with conflicts between vertical scroll guestures on out container perfectly
 - Flexible for customizing the slider / border radius / background colors / animate duration / vibrate duration / ...
 
 ### How to use?
