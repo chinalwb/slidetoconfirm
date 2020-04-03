@@ -8,7 +8,7 @@
 - It is a component that requires user slide to confirm for some proceeding actions
 - Works on Android
 
-### What it looks like?
+### What does it look like?
 ![Sharp corners](https://user-images.githubusercontent.com/1758864/78349273-efce9b00-75d5-11ea-9a10-8022db9ade5a.png)
 
 ![Round corners](https://user-images.githubusercontent.com/1758864/78349279-f230f500-75d5-11ea-9679-d3f400cd7135.png)
