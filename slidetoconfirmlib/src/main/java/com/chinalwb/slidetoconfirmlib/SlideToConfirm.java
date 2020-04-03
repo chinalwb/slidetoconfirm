@@ -39,6 +39,7 @@ public class SlideToConfirm extends RelativeLayout {
 
     private final int DEFAULT_BORDER_WIDTH = 2;
     private final int DEFAULT_BORDER_RADIUS = 8;
+    private final int DEFAULT_SLIDER_BACKGROUND_COLOR = Color.TRANSPARENT;
     private final int DEFAULT_SLIDER_COLOR = Color.parseColor("#484EAA");
     private final int DEFAULT_SLIDER_WIDTH = (int) Util.dp2px(60);
     private final String DEFAULT_SLIDER_LOTTIE = "slide_right.json";
@@ -59,6 +60,7 @@ public class SlideToConfirm extends RelativeLayout {
     private float[] mBorderCornerRadii = {mBorderRadius, mBorderRadius, mBorderRadius, mBorderRadius};
 
     // Slider anchor
+    private int mSliderBackgroundColor;
     private int mSliderColor;
     private int mSliderWidth;
     private int mSliderImageWidth; // Not in real use for now, simply equals mSliderWidth
@@ -118,11 +120,12 @@ public class SlideToConfirm extends RelativeLayout {
         if (TextUtils.isEmpty(mSliderLottie)) {
             mSliderLottie = DEFAULT_SLIDER_LOTTIE;
         }
-        int sliderImageResId = ta.getResourceId(R.styleable.SlideToConfirm_slider_image, -1);
-        if (sliderImageResId != -1) {
+        int sliderImageResId = ta.getResourceId(R.styleable.SlideToConfirm_slider_image, 0);
+        if (sliderImageResId != 0) {
             mSliderImageResId = sliderImageResId;
         }
 
+        mSliderBackgroundColor = ta.getColor(R.styleable.SlideToConfirm_slider_background_color, DEFAULT_SLIDER_BACKGROUND_COLOR);
         mSliderColor = ta.getColor(R.styleable.SlideToConfirm_slider_color, DEFAULT_SLIDER_COLOR);
         mSliderWidth = (int) ta.getDimension(R.styleable.SlideToConfirm_slider_width, DEFAULT_SLIDER_WIDTH);
         mSliderWidth = mSliderWidth >= DEFAULT_SLIDER_WIDTH ? mSliderWidth : DEFAULT_SLIDER_WIDTH;
@@ -229,7 +232,7 @@ public class SlideToConfirm extends RelativeLayout {
     private View getSlider() {
         ImageView sliderView;
         RelativeLayout.LayoutParams layoutParams = new LayoutParams(mSliderImageWidth, LayoutParams.MATCH_PARENT);
-        if (mSliderImageResId != -1) {
+        if (mSliderImageResId != 0) {
             sliderView = new ImageView(mContext);
             sliderView.setImageResource(mSliderImageResId);
             layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
@@ -274,6 +277,8 @@ public class SlideToConfirm extends RelativeLayout {
         this.setBackgroundResource(R.drawable.stc_bg);
         GradientDrawable bg = (GradientDrawable) this.getBackground();
         bg.setStroke((int) mBorderWidth, mSliderColor);
+        bg.setColor(mSliderBackgroundColor);
+
 
         // bg corners
         float[] cornerRadii = new float[8];
