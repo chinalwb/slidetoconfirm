@@ -39,7 +39,7 @@
 ### How to use?
 ----------
 - Two steps:
-1. Add `implementation 'com.github.chinalwb:slidetoconfirm:1.0.0'` in your build.gradle
+1. Add `implementation 'com.github.chinalwb:slidetoconfirm:1.0.1'` in your build.gradle
 2. Include `com.chinalwb.slidetoconfirmlib.SlideToConfirm` whenever necessary, for example:
 ```
 
