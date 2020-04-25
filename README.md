@@ -4,6 +4,8 @@
 
 
 # Slide to confirm [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg?version=1.0.1) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/1.0.1/link)
+
+### [中文说明](./README_ch.md)
 ### What's this?
 - It is a component that requires user slide to confirm for some proceeding actions
 - Works on Android
