@@ -4,7 +4,8 @@
 </p>
 
 
-# 滑动确认组件 [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg?version=1.0.1) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/1.0.1/link)
+# 滑动确认组件   [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/_latestVersion)
+
 ### 这是什么?
 - 当你的 App 需要用户滑动来确认某些信息的时候，可以使用这个滑动确认组件
 - 适用 Android 平台
@@ -35,7 +36,7 @@
 
 ### 如何使用?
 - 简单两步:
-1. 在 build.gradle 中加依赖 `implementation 'com.github.chinalwb:slidetoconfirm:1.0.1'`
+1. 在 build.gradle 中加依赖 `implementation 'com.github.chinalwb:slidetoconfirm:1.0.2'`
 2. 然后在需要的地方引用 `com.chinalwb.slidetoconfirmlib.SlideToConfirm`, 比如:
 ```
 
