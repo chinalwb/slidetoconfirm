@@ -93,6 +93,10 @@
 |   completed_text_font   |   滑动成功之后的提示文字的字体样式, 需要放到 `res/font` 目录下      |  @font/你的字体资源文件    |
 
 
+### 可能用的到的 API
+1. `SlideToConfirm.setSlideListener(new ISlideListener() { ... });` 当需要监听滑动状态的时候用这个。比如开始滑动 、 正在滑动、松手取消 、 松手完成 这些事件均在这个接口中提供了回调方法。
+2. `SlideToConfirm.reset();` 当需要在已经完成的状态下重置组件状态的时候，调用这个方法。
+
 ------
 License: MIT
 
