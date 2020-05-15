@@ -3,7 +3,8 @@
 </p>
 
 
-# Slide to confirm [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg?version=1.0.1) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/1.0.1/link)
+# Slide to confirm  [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/_latestVersion)
+
 
 ### [中文说明](./README_ch.md)
 ### What's this?
@@ -93,6 +94,11 @@
 |   completed_text_color   |  The text color of the completed text    |  any color referrence    |
 |   completed_text_font   |   The text font of the completed text, in `res/font` folder      |  @font/your_font    |
 
+
+### APIs I may need
+
+1. `SlideToConfirm.setSlideListener(new ISlideListener() { ... })`; Use this when you want to detect the slider is start dragging (action down) / in dragging (action move) / cancel (action up) / done (action up when at the right end)
+2. `SlideToConfirm.reset()`; Use this when you want to reset the slider to initial state after it has been in completed state
 
 ------
 License: MIT
