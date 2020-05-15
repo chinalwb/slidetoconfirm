@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SlideToConfirm slideToConfirm = findViewById(R.id.slide_to_confirm);
+        final SlideToConfirm slideToConfirm = findViewById(R.id.slide_to_confirm);
         slideToConfirm.setSlideListener(new ISlideListener() {
             @Override
             public void onSlideStart() {
@@ -35,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSlideDone() {
                 Log.w("XX", "on Done!!");
+                slideToConfirm.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        slideToConfirm.reset();
+                    }
+                }, 1000 * 3);
             }
         });
     }

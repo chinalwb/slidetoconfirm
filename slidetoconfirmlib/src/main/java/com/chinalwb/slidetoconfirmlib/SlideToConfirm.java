@@ -352,7 +352,7 @@ public class SlideToConfirm extends RelativeLayout {
                 return true;
             }
 
-            resetStatus();
+            resetSlider();
         }
 
         performClick();
@@ -360,7 +360,7 @@ public class SlideToConfirm extends RelativeLayout {
         return true;
     }
 
-    private void resetStatus() {
+    private void resetSlider() {
         mDownX = 0;
         mDeltaX = 0;
         mStartDrag = false;
@@ -406,6 +406,21 @@ public class SlideToConfirm extends RelativeLayout {
         mCTA.setVisibility(View.VISIBLE);
 
         notifySliderDone();
+    }
+
+    public void reset() {
+        mDownX = 0;
+        mDeltaX = 0;
+        mUnlocked = false;
+        mStartDrag = false;
+
+        RelativeLayout.LayoutParams swipedLayoutParams = (RelativeLayout.LayoutParams) mSwipedView.getLayoutParams();
+        swipedLayoutParams.width = mSliderWidth;
+        mSwipedView.setLayoutParams(swipedLayoutParams);
+
+        mEngagedTextView.setVisibility(View.VISIBLE);
+        mSlider.setVisibility(View.VISIBLE);
+        mCTA.setVisibility(View.GONE);
     }
 
 
