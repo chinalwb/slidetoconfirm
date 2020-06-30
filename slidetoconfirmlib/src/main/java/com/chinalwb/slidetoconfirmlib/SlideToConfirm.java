@@ -163,7 +163,7 @@ public class SlideToConfirm extends RelativeLayout {
 
         mCompletedText = ta.getString(R.styleable.SlideToConfirm_completed_text);
         if (mCompletedText == null) {
-            mCompletedText = DEFAULT_ENGAGED_TEXT;
+            mCompletedText = DEFAULT_COMPLETED_TEXT;
         }
         mCompletedTextColor = ta.getColor(R.styleable.SlideToConfirm_completed_text_color, DEFAULT_COMPLETED_TEXT_COLOR);
         mCompletedTextSize = ta.getDimension(R.styleable.SlideToConfirm_completed_text_size, DEFAULT_COMPLETED_TEXT_SIZE);
@@ -423,6 +423,25 @@ public class SlideToConfirm extends RelativeLayout {
         mCTA.setVisibility(View.GONE);
     }
 
+    public void setEngageText(String engageText) {
+        if (TextUtils.isEmpty(engageText)) {
+            return;
+        }
+        mEngagedText = engageText;
+        if (mEngagedTextView != null) {
+            mEngagedTextView.setText(engageText);
+        }
+    }
+
+    public void setCompletedText(String completedText) {
+        if (TextUtils.isEmpty(completedText)) {
+            return;
+        }
+        mCompletedText = completedText;
+        if (mCTA != null) {
+            mCTA.setText(completedText);
+        }
+    }
 
     private void handleVibration() {
         if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.VIBRATE) !=
