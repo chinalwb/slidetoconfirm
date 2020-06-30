@@ -4,7 +4,8 @@
 </p>
 
 
-# 滑动确认组件 [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg?version=1.0.1) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/1.0.1/link)
+# 滑动确认组件   [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/_latestVersion)
+
 ### 这是什么?
 - 当你的 App 需要用户滑动来确认某些信息的时候，可以使用这个滑动确认组件
 - 适用 Android 平台
@@ -35,7 +36,7 @@
 
 ### 如何使用?
 - 简单两步:
-1. 在 build.gradle 中加依赖 `implementation 'com.github.chinalwb:slidetoconfirm:1.0.1'`
+1. 在 build.gradle 中加依赖 `implementation 'com.github.chinalwb:slidetoconfirm:1.0.2'`
 2. 然后在需要的地方引用 `com.chinalwb.slidetoconfirmlib.SlideToConfirm`, 比如:
 ```
 
@@ -92,6 +93,10 @@
 |   completed_text_color   |  滑动成功之后的提示文字的字体颜色    |  任何色值    |
 |   completed_text_font   |   滑动成功之后的提示文字的字体样式, 需要放到 `res/font` 目录下      |  @font/你的字体资源文件    |
 
+
+### 可能用的到的 API
+1. `SlideToConfirm.setSlideListener(new ISlideListener() { ... });` 当需要监听滑动状态的时候用这个。比如开始滑动 、 正在滑动、松手取消 、 松手完成 这些事件均在这个接口中提供了回调方法。
+2. `SlideToConfirm.reset();` 当需要在已经完成的状态下重置组件状态的时候，调用这个方法。
 
 ------
 License: MIT
