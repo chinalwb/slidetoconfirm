@@ -22,6 +22,10 @@
 
 ![UI_5](https://user-images.githubusercontent.com/1758864/78350204-6029ec00-75d7-11ea-8f1c-4da0558f5337.png)
 
+![samples](https://user-images.githubusercontent.com/1758864/86143658-4b51eb80-bb27-11ea-9873-e3d00209ce6d.gif)
+
+
+
 ### How is it implemented?
 - It extends the Android `RelativeLayout`
 - It adds necessary children at runtime
@@ -34,6 +38,7 @@
 - Perfect performance
 - Deal with conflicts between vertical scroll guestures on out container perfectly
 - Flexible for customizing the slider (either LOTTIE or image) / border radius / background colors / animate duration / vibrate duration / ...
+- Allow resetting status, this UNLOCKs the feature of multi-steps action!
 
 ### How to use?
 - Two steps:
@@ -99,6 +104,8 @@
 
 1. `SlideToConfirm.setSlideListener(new ISlideListener() { ... })`; Use this when you want to detect the slider is start dragging (action down) / in dragging (action move) / cancel (action up) / done (action up when at the right end)
 2. `SlideToConfirm.reset()`; Use this when you want to reset the slider to initial state after it has been in completed state
+3. `SlideToConfirm.setEngageText(...)`; Use this when you want to update the engage text programmatically 
+4. `SlideToConfirm.setCompletedText(...)`; Use this when you want to update the completed text programmatically 
 
 ------
 License: MIT
