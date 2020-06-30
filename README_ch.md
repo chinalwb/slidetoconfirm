@@ -21,6 +21,9 @@
 
 ![UI_5](https://user-images.githubusercontent.com/1758864/78350204-6029ec00-75d7-11ea-8f1c-4da0558f5337.png)
 
+![samples](https://user-images.githubusercontent.com/1758864/86143658-4b51eb80-bb27-11ea-9873-e3d00209ce6d.gif)
+
+
 ### 内部怎么实现的?
 - 继承自 Android `RelativeLayout`
 - 在运行时根据需要添加必要的子控件
@@ -97,6 +100,8 @@
 ### 可能用的到的 API
 1. `SlideToConfirm.setSlideListener(new ISlideListener() { ... });` 当需要监听滑动状态的时候用这个。比如开始滑动 、 正在滑动、松手取消 、 松手完成 这些事件均在这个接口中提供了回调方法。
 2. `SlideToConfirm.reset();` 当需要在已经完成的状态下重置组件状态的时候，调用这个方法。
+3. `SlideToConfirm.setEngageText(...)`; 当需要用代码设定滑动组件显示文字的时候，调用这个方法。
+4. `SlideToConfirm.setCompletedText(...)`; 当需要用代码设定滑动完成显示文字的时候，调用这个方法。
 
 ------
 License: MIT
