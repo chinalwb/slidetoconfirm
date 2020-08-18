@@ -36,7 +36,7 @@
 ### Highlights
 - Easy to use, one line code for all configurations
 - Perfect performance
-- Deal with conflicts between vertical scroll guestures on out container perfectly
+- Deal with conflicts between vertical scroll gestures on out container perfectly
 - Flexible for customizing the slider (either LOTTIE or image) / border radius / background colors / animate duration / vibrate duration / ...
 - Allow resetting status, this UNLOCKs the feature of multi-steps action!
 
@@ -82,17 +82,17 @@
 | ---- | ---- | ---- |
 |   border_radius   |  The border radius of the entire layout    |   0dp / 2dp / any other dp   |
 |   border_width   |   The width of the border    |   1dp   |
-|   slider_background_color   |  The color of the entire layout    |  any color referrence    |
+|   slider_background_color   |  The color of the entire layout    |  any color reference    |
 |   slider_color   |   The color of the slider  |   any color referrence    |
 |   slider_lottie   |   The lottie file to be shown as slider    |   lottie_x.json -- needs to be in `assets` folder    |
-|   slider_image   |   If you don't want to use lottie, you can use image, when both this and `slider_lottie` are provided, this wins    |   any drawable referrene   |
+|   slider_image   |   If you don't want to use lottie, you can use image, when both this and `slider_lottie` are provided, this wins    |   any drawable reference   |
 |   slider_width   |  Specify what the size of the slider   |  100dp    |
 |   slider_reset_duration   |  How long it takes for the reset animation when releasing the slider if not at end, in `ms`    |   300   |
 |   slider_vibration_duration   |  How long for the vibration when triggering unlocked, in `ms`   |  100    |
-|   slider_threshold   |  How far you'd regard the user has reached the end, for example 0dp means user has to explict reaches the right end    |  1dp    |
+|   slider_threshold   |  How far you'd regard the user has reached the end, for example 0dp means user has to explicit reaches the right end    |  1dp    |
 |   engage_text   |  To customize `Slide to unlock`    |  any string, like `slide to xxx`    |
 |   engage_text_size   |  The text size of the engage text `Slide to unlock`    |  17sp    |
-|   engage_text_color   |  The text color of the engage text `Slide to unlock`    |  any color referrence     |
+|   engage_text_color   |  The text color of the engage text `Slide to unlock`    |  any color reference     |
 |   engaged_text_font   |  The text font of the engage text, in `res/font` folder    |  @font/your_font    |
 |   completed_text   |  To customize the text after unlocked. e.g.: `Unlocked!`    |   any string you want  |
 |   completed_text_size   |   The text size of the completed text   |  17sp    |
