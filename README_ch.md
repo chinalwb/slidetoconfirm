@@ -6,6 +6,12 @@
 
 # 滑动确认组件   [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/_latestVersion)
 
+### 祝贺!
+- 这个库已经被成功应用于:
+1. [共享出行](https://play.google.com/store/apps/category/MAPS_AND_NAVIGATION?hl=en&gl=US) App
+2. 金融行业 App
+3. 保险行业 App
+
 ### 这是什么?
 - 当你的 App 需要用户滑动来确认某些信息的时候，可以使用这个滑动确认组件
 - 适用 Android 平台
