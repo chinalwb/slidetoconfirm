@@ -7,6 +7,13 @@
 
 
 ### [中文说明](./README_ch.md)
+
+### Congrats!
+- This library has been successfully used in:
+1. [Maps & Navigation](https://play.google.com/store/apps/category/MAPS_AND_NAVIGATION?hl=en&gl=US) App
+2. Financial App
+3. Insurance App
+
 ### What's this?
 - It is a component that requires user slide to confirm for some proceeding actions
 - Works on Android
