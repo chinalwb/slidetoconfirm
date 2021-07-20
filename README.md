@@ -10,9 +10,9 @@
 
 ### Congrats!
 - This library has been successfully used in:
-1. [Maps & Navigation](https://play.google.com/store/apps/category/MAPS_AND_NAVIGATION?hl=en&gl=US) App
-2. Financial App
-3. Insurance App
+1. Insurance App
+2. [Maps & Navigation](https://play.google.com/store/apps/category/MAPS_AND_NAVIGATION?hl=en&gl=US) App
+3. Financial App
 
 ### What's this?
 - It is a component that requires user slide to confirm for some proceeding actions
