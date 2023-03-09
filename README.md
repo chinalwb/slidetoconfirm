@@ -6,6 +6,11 @@
 # Slide to confirm  [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/_latestVersion)
 
 
+I am open to work. Feel free to contact me at chinalwb168@gmail.com if you have an opening. Thank you!
+
+
+
+
 ### [中文说明](./README_ch.md)
 
 ### Congrats!
