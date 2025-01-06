@@ -54,7 +54,7 @@ I am open to work. Feel free to contact me at chinalwb168@gmail.com if you have 
 
 ### How to use?
 - Two steps:
-1. Add `implementation 'com.github.chinalwb:slidetoconfirm:1.0.2'` in your build.gradle
+1. Add `implementation 'com.github.chinalwb:slidetoconfirm:1.0.3'` in your build.gradle
 2. Include `com.chinalwb.slidetoconfirmlib.SlideToConfirm` whenever necessary, for example:
 ```
 
