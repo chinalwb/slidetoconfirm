@@ -2,6 +2,11 @@
 <resources>
 
     <declare-styleable name="SlideToConfirm">
+        <attr name="init_status" format="enum">
+            <enum name="initial" value="0"/>
+            <enum name="confirmed" value="1"/>
+        </attr>
+
         <attr name="border_radius" format="dimension" />
         <attr name="border_width" format="dimension" />
         <attr name="slider_background_color" format="color|reference" />

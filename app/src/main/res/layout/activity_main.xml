@@ -41,7 +41,7 @@
         app:completed_text="Unlocked!"
         app:completed_text_color="@android:color/white"
         app:completed_text_size="30sp"
-
+        app:init_status="initial"
         tools:context=".MainActivity" >
     </com.chinalwb.slidetoconfirmlib.SlideToConfirm>
 

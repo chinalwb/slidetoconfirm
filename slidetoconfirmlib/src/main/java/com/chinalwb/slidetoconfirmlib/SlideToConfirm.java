@@ -13,6 +13,8 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.text.TextUtils;
@@ -97,7 +99,12 @@ public class SlideToConfirm extends RelativeLayout {
 
     private boolean mResetting;
     private boolean mStartDrag;
+
     private boolean mUnlocked;
+    private static final int STATUS_INITIAL = 0;
+    private static final int STATUS_UNLOCKED = 1;
+
+
 
     private ISlideListener slideListener;
 
@@ -175,6 +182,10 @@ public class SlideToConfirm extends RelativeLayout {
                 e.printStackTrace();
             }
         }
+
+        int initStatus = ta.getInt(R.styleable.SlideToConfirm_init_status, STATUS_INITIAL);
+        mUnlocked = initStatus == STATUS_UNLOCKED;
+
         ta.recycle();
     }
 
@@ -289,6 +300,9 @@ public class SlideToConfirm extends RelativeLayout {
         }
         bg.setCornerRadii(cornerRadii);
 
+        if (mUnlocked) {
+            setUnlockedStatus(false, false);
+        }
     }
 
     @Override
@@ -348,7 +362,7 @@ public class SlideToConfirm extends RelativeLayout {
                 reachEnd = true;
             }
             if (reachEnd) {
-                setUnlockedStatus();
+                setUnlockedStatus(true, true);
                 return true;
             }
 
@@ -393,19 +407,26 @@ public class SlideToConfirm extends RelativeLayout {
          notifySliderCancel();
     }
 
-    private void setUnlockedStatus() {
+    public void setUnlockedStatus(boolean useVibration, boolean notifyListener) {
+        setUnlockedStatusUI(useVibration);
+        if (notifyListener) {
+            notifySliderDone();
+        }
+    }
+
+    private void setUnlockedStatusUI(boolean useVibration) {
         RelativeLayout.LayoutParams swipedLayoutParams = (RelativeLayout.LayoutParams) mSwipedView.getLayoutParams();
         swipedLayoutParams.width = mTotalWidth;
         mSwipedView.setLayoutParams(swipedLayoutParams);
 
         mUnlocked = true;
-        handleVibration();
+        if (useVibration) {
+            handleVibration();
+        }
         mEngagedTextView.setVisibility(View.GONE);
         mSlider.setVisibility(View.GONE);
         mCTA.setText(mCompletedText);
         mCTA.setVisibility(View.VISIBLE);
-
-        notifySliderDone();
     }
 
     public void reset() {
@@ -467,6 +488,31 @@ public class SlideToConfirm extends RelativeLayout {
         return 0 < x && x < mSliderWidth;
     }
 
+    @Override
+    public Parcelable onSaveInstanceState() {
+        Parcelable superState = super.onSaveInstanceState();
+        SavedState savedState = new SavedState(superState);
+        savedState.initStatus = STATUS_INITIAL;
+        if (mUnlocked) {
+            savedState.initStatus = STATUS_UNLOCKED;
+        }
+        return savedState;
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+        super.onRestoreInstanceState(state);
+        if (!(state instanceof SavedState)) {
+            super.onRestoreInstanceState(state);
+            return;
+        }
+
+        SavedState savedState = (SavedState) state;
+        super.onRestoreInstanceState(savedState.getSuperState());
+
+        int initStatus = savedState.initStatus;
+        mUnlocked = initStatus == STATUS_UNLOCKED;
+    }
 
     /* -------------------------------- *
      * Slider callbacks
@@ -504,4 +550,37 @@ public class SlideToConfirm extends RelativeLayout {
     public void setSlideListener(ISlideListener slideListener) {
         this.slideListener = slideListener;
     }
+
+    /**
+     *
+     */
+    static class SavedState extends BaseSavedState {
+        int initStatus;
+
+        SavedState(Parcelable superState) {
+            super(superState);
+        }
+
+        private SavedState(Parcel in) {
+            super(in);
+            initStatus = in.readInt();
+        }
+
+        @Override
+        public void writeToParcel(Parcel out, int flags) {
+            super.writeToParcel(out, flags);
+            out.writeInt(initStatus);
+        }
+
+        public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator<SavedState>() {
+            public SavedState createFromParcel(Parcel in) {
+                return new SavedState(in);
+            }
+
+            public SavedState[] newArray(int size) {
+                return new SavedState[size];
+            }
+        };
+    }
+
 }
