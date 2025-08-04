@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 slideToConfirm.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        slideToConfirm.reset();
+                        /// slideToConfirm.reset();
                     }
                 }, 500);
             }
