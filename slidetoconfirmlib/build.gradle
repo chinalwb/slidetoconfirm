@@ -8,11 +8,11 @@ version = '1.0.4'
 
 android {
     namespace 'com.chinalwb.slidetoconfirmlib'
-    compileSdkVersion 29
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 33
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
