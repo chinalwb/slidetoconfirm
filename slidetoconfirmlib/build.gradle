@@ -1,26 +1,18 @@
-apply plugin: 'com.android.library'
-
-
-ext {
-    PUBLISH_GROUP_ID = 'com.github.chinalwb'
-    PUBLISH_ARTIFACT_ID = 'slidetoconfirm'
-    PUBLISH_VERSION = '1.0.3'
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
 }
 
-tasks.withType(Javadoc) {
-    options.addStringOption('Xdoclint:none', '-quiet')
-    options.addStringOption('encoding', 'UTF-8')
-    options.addStringOption('charSet', 'UTF-8')
-}
+group = 'com.github.chinalwb'
+version = '1.0.4'
 
 android {
+    namespace 'com.chinalwb.slidetoconfirmlib'
     compileSdkVersion 29
-
 
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
@@ -31,20 +23,38 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    namespace 'com.chinalwb.slidetoconfirmlib'
 
+    // ✅ This is required for AGP 7+ to expose 'release' component
+    publishing {
+        singleVariant("release")
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.chinalwb'
+                artifactId = 'slidetoconfirm'
+                version = '1.0.4'
+            }
+        }
+    }
+}
+
+tasks.withType(Javadoc).configureEach {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
     implementation 'com.airbnb.android:lottie:3.4.1'
 }
-
-// apply from: './build-aar.gradle'
-// apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
