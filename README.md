@@ -55,7 +55,7 @@ I am open to work. Feel free to contact me at chinalwb168@gmail.com if you have 
 
 ### How to use?
 - Two steps:
-1. Add `implementation 'com.github.chinalwb:slidetoconfirm:1.0.3'` in your build.gradle
+1. Add `implementation 'com.github.chinalwb:slidetoconfirm:1.0.4'` in your build.gradle
 2. Include `com.chinalwb.slidetoconfirmlib.SlideToConfirm` whenever necessary, for example:
 ```
 
@@ -111,6 +111,7 @@ I am open to work. Feel free to contact me at chinalwb168@gmail.com if you have 
 |   completed_text_size   |   The text size of the completed text   |  17sp    |
 |   completed_text_color   |  The text color of the completed text    |  any color referrence    |
 |   completed_text_font   |   The text font of the completed text, in `res/font` folder      |  @font/your_font    |
+|   init_status   |   The initial status of this widget      |  'initial' / 'confirmed'    |
 
 
 ### APIs I may need
@@ -118,7 +119,8 @@ I am open to work. Feel free to contact me at chinalwb168@gmail.com if you have 
 1. `SlideToConfirm.setSlideListener(new ISlideListener() { ... })`; Use this when you want to detect the slider is start dragging (action down) / in dragging (action move) / cancel (action up) / done (action up when at the right end)
 2. `SlideToConfirm.reset()`; Use this when you want to reset the slider to initial state after it has been in completed state
 3. `SlideToConfirm.setEngageText(...)`; Use this when you want to update the engage text programmatically 
-4. `SlideToConfirm.setCompletedText(...)`; Use this when you want to update the completed text programmatically 
+4. `SlideToConfirm.setCompletedText(...)`; Use this when you want to update the completed text programmatically
+5. `SlideToConfirm.setUnlockedStatus(boolean useVibration, boolean notifyListener)`; Use this when you need to unlock (set as confirmed) programmatically.
 
 ------
 License: MIT
