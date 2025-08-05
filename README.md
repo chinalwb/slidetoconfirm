@@ -3,7 +3,8 @@
 </p>
 
 
-# Slide to confirm  [ ![Download](https://api.bintray.com/packages/chinalwb/slidetoconfirm/slidetoconfirm/images/download.svg) ](https://bintray.com/chinalwb/slidetoconfirm/slidetoconfirm/_latestVersion)
+# Slide to confirm  [![](https://jitpack.io/v/chinalwb/slidetoconfirm.svg)](https://jitpack.io/#chinalwb/slidetoconfirm)
+
 
 
 I am open to work. Feel free to contact me at chinalwb168@gmail.com if you have an opening. Thank you!
