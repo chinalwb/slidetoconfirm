@@ -23,6 +23,7 @@ I am open to work. Feel free to contact me at chinalwb168@gmail.com if you have 
 ### What's this?
 - It is a component that requires user slide to confirm for some proceeding actions
 - Works on Android
+- For Compose, use [slidetoconfirm-compose](https://github.com/chinalwb/slidetoconfirm-compose)
 
 ### What does it look like?
 ![Sharp corners](https://user-images.githubusercontent.com/1758864/78349273-efce9b00-75d5-11ea-9a10-8022db9ade5a.png)
